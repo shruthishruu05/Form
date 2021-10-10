@@ -104,6 +104,14 @@
                 passwordError.textContent = "";
             else passwordError.textContent = "password is Incorrect"
         });
+        const tel = document.querySelector('#tel');
+        const telError = document.querySelector('.telephone-error');
+        tel.addEventListener('input', function() {
+            let numberRegex = RegExp('^[0][1-9][0][0-9]{8}$');
+            if (numberRegex.test(tel.value)) 
+            telError.textContent = "";
+            else telError.textContent = "Telephone number is Incorrect";
+        });
     </script>
 </body>
 
