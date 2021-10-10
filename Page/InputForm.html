@@ -95,6 +95,14 @@
                 numberError.textContent = "";
             else numberError.textContent = "Mobile number is Incorrect";
         });
+        const password = document.querySelector('#password');
+        const passwordError = document.querySelector('.password-error');
+        password.addEventListener('input', function() {
+            let passwordRegex = RegExp('^(?=.*[a-z])(?=.*[A-Z]).{8,}$');
+            if (passwordRegex.test(password.value))
+                passwordError.textContent = "";
+            else passwordError.textContent = "password is Incorrect"
+        });
     </script>
 </body>
 
